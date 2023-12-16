@@ -29,4 +29,9 @@ public class WallSensor extends AngularSensor{
         }
 
     }
+
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new WallSensor(guy);
+    }
 }

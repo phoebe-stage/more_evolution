@@ -33,4 +33,9 @@ public class DirectionSensor extends AngularSensor{
             }
         }
     }
+
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new DirectionSensor(guy);
+    }
 }

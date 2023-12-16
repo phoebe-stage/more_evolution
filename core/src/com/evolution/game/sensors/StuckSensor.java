@@ -22,4 +22,9 @@ public class StuckSensor extends AngularSensor{
             vectorSum.add(guy.getDirection());
         }
     }
+
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new StuckSensor(guy);
+    }
 }

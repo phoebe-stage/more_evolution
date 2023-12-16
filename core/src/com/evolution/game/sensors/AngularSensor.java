@@ -18,11 +18,16 @@ public abstract class AngularSensor {
     protected Vector2 vectorSum = new Vector2(0,0);
 
     public AngularSensor(Guy guy) {
-        this.position= guy.getPosition();
-        this.angle = 0;
-        this.strength = 0;
-        this.guy = guy;
-        filterAndClean();
+        if (guy == null) {
+            System.out.println("set up");
+        } else {
+            this.position= guy.getPosition();
+            this.angle = 0;
+            this.strength = 0;
+            this.guy = guy;
+            filterAndClean();
+        }
+
     }
 
     public int getAngle() {
@@ -52,4 +57,6 @@ public abstract class AngularSensor {
     public Vector2 getVectorSum() {
         return vectorSum;
     }
+
+    public abstract AngularSensor clone(Guy guy);
 }

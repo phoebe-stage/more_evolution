@@ -24,7 +24,10 @@ public class CloseGuySensor extends AngularSensor{
         sensedEntities.removeAll(toRemove);
     }
 
-
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new CloseGuySensor(guy);
+    }
 
 
 }

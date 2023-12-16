@@ -24,4 +24,9 @@ public class ObstacleSensor extends AngularSensor {
         }
         sensedEntities.removeAll(toRemove);
     }
+
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new ObstacleSensor(guy);
+    }
 }

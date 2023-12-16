@@ -20,4 +20,9 @@ public class AlwaysSensor extends AngularSensor{
     public void calculate() {
         vectorSum.set(0,-1);
     }
+
+    @Override
+    public AngularSensor clone(Guy guy) {
+        return new AlwaysSensor(guy);
+    }
 }
